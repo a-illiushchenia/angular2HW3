@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<input type="text" (keyup) = "onInputToFilter($event.target.value)" #filter>
+<div>{{findCount}}</div>
+<div *ngFor="let value of findList">
+  <div>id = {{value.id}} archive_url = {{value.archive_url}}</div>
+</div>
